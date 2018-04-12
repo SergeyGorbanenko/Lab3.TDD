@@ -1,4 +1,5 @@
 ﻿using System;
+using Lab3TDD;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace TDD
@@ -7,7 +8,7 @@ namespace TDD
     public class Test
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestIsNotNullMathCalc()
         {
             MathCalc calc = new MathCalc();
             Assert.IsNotNull(calc);
