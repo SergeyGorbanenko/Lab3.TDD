@@ -12,6 +12,7 @@ namespace TDD
         private double[,] t = { { 1, 2, 4 }, { 2, 5, 2 }, { 3, 6, 7 } };
         private double[,] d = { { 6, 5, 4 }, { 4, 13, 6 }, { 7, 7, 11 } };
         private double[,] e = { { -4, -1, 2 }, { 0, -3, 6 }, { 1, -3, 3 } };
+        private double[,] f = { { 2, 4, 6 }, { 4, 10, 12 }, { 8, 4, 14 } };
 
         [TestMethod]
         public void Test1_IsNotNullMathCalc()
@@ -57,6 +58,13 @@ namespace TDD
             MathCalc calc = new MathCalc();
             double[,] rezult = calc.Sub(a, b);
             Assert.AreEqual(true, calc.CompareMatrix(e, rezult));
+        }
+
+        public void Test7_MulNum()
+        {
+            MathCalc calc = new MathCalc();
+            double[,] rezult = calc.MulNum(a, 2);
+            Assert.AreEqual(true, calc.CompareMatrix(f, rezult));
         }
     }
 }
