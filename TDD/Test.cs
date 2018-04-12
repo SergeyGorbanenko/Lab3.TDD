@@ -16,6 +16,7 @@ namespace TDD
             Assert.IsNotNull(calc);
         }
 
+        [TestMethod]
         public void Test2_CompareMatrix()
         {
             MathCalc calc = new MathCalc();

@@ -6,9 +6,12 @@ namespace Lab3TDD
     {
         public MathCalc() { }
 
-        public bool CompareMatrix(double[,] a1, double[,] a2)
+        public bool CompareMatrix(double[,] a, double[,] b)
         {
-            throw new NotImplementedException();
+            if (a.GetLength(0) != b.GetLength(0) && a.GetLength(1) != b.GetLength(1))
+                return false;
+            else
+                return true;
         }
     }
 }
