@@ -43,5 +43,14 @@ namespace Lab3TDD
                     c[i, j] = a[i, j] - b[i, j];
             return c;
         }
+
+        public double[,] MulNum(double[,] a, int v)
+        {
+            double[,] c = new double[a.GetLength(0), a.GetLength(1)];
+            for (int i = 0; i < a.GetLength(0); i++)
+                for (int j = 0; j < a.GetLength(1); j++)
+                    c[i, j] = a[i, j] * v;
+            return c;
+        }
     }
 }
