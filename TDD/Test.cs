@@ -13,6 +13,7 @@ namespace TDD
         private double[,] d = { { 6, 5, 4 }, { 4, 13, 6 }, { 7, 7, 11 } };
         private double[,] e = { { -4, -1, 2 }, { 0, -3, 6 }, { 1, -3, 3 } };
         private double[,] f = { { 2, 4, 6 }, { 4, 10, 12 }, { 8, 4, 14 } };
+        private double[,] g = { { 18, 34, 13 }, { 38, 76, 26 }, { 45, 63, 32 } };
 
         [TestMethod]
         public void Test1_IsNotNullMathCalc()
@@ -53,6 +54,7 @@ namespace TDD
             Assert.AreEqual(true, calc.CompareMatrix(rezult, d));
         }
 
+        [TestMethod]
         public void Test6_Sub()
         {
             MathCalc calc = new MathCalc();
@@ -60,11 +62,20 @@ namespace TDD
             Assert.AreEqual(true, calc.CompareMatrix(e, rezult));
         }
 
+        [TestMethod]
         public void Test7_MulNum()
         {
             MathCalc calc = new MathCalc();
             double[,] rezult = calc.MulNum(a, 2);
             Assert.AreEqual(true, calc.CompareMatrix(f, rezult));
+        }
+
+        [TestMethod]
+        public void Test8_Mul()
+        {
+            MathCalc calc = new MathCalc();
+            double[,] rezult = calc.Mul(a, b);
+            Assert.AreEqual(true, calc.CompareMatrix(g, rezult));
         }
     }
 }
