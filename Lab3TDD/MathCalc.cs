@@ -10,8 +10,11 @@ namespace Lab3TDD
         {
             if (a.GetLength(0) != b.GetLength(0) && a.GetLength(1) != b.GetLength(1))
                 return false;
-            else
-                return true;
+            for (int i = 0; i < a.GetLength(0); i++)
+                for (int j = 0; j < a.GetLength(1); j++)
+                    if (a[i, j] != b[i, j])
+                        return false;
+            return true;
         }
     }
 }
