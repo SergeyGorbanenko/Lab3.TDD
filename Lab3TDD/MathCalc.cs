@@ -16,5 +16,14 @@ namespace Lab3TDD
                         return false;
             return true;
         }
+
+        public double[,] Trans(double[,] a)
+        {
+            double[,] c = new double[a.GetLength(1), a.GetLength(0)];
+            for (int i = 0; i < a.GetLength(0); i++)
+                for (int j = 0; j < a.GetLength(1); j++)
+                    c[i, j] = a[j, i];
+            return c;
+        }
     }
 }
