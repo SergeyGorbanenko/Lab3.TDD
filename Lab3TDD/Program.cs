@@ -10,6 +10,7 @@ namespace Lab3TDD
     {
         static void Main(string[] args)
         {
+
         }
     }
 }
