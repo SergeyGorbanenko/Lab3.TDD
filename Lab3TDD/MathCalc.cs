@@ -2,8 +2,8 @@
 {
     public class MathCalc
     {
-        public MathCalc()
-        {
-        }
+        public MathCalc() { }
+
+
     }
 }
