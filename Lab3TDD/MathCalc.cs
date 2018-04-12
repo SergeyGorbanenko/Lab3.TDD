@@ -52,5 +52,18 @@ namespace Lab3TDD
                     c[i, j] = a[i, j] * v;
             return c;
         }
+
+        public double[,] Mul(double[,] a, double[,] b)
+        {
+            double[,] c = new double[a.GetLength(1), a.GetLength(0)];
+            for (int i = 0; i < a.GetLength(0); i++)
+                for (int j = 0; j < a.GetLength(1); j++)
+                {
+                    c[i, j] = 0;
+                    for (int k = 0; k < b.GetLength(1); k++)
+                        c[i, j] += a[i, k] * b[k, j];
+                }
+            return c;
+        }
     }
 }
