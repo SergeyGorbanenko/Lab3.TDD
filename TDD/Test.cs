@@ -9,6 +9,8 @@ namespace TDD
         [TestMethod]
         public void TestMethod1()
         {
+            MathCalc calc = new MathCalc();
+            Assert.IsNotNull(calc);
         }
     }
 }
